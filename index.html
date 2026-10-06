@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Hazard map_West pit</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .container { 
+      position: relative; 
+      display: inline-block; 
+    }
+    .hotspot {
+      position: absolute;
+      width: 60px; height: 20px;
+      background: transparent;
+      cursor: pointer;  
+    }
+    .popup {
+      position: absolute;
+      background: #fff;
+      border: 3px solid red;     /* Улаан хүрээ */
+      padding: 10px;
+      width: 1500px;       
+      box-shadow: 2px 2px 5px #aaa;
+      z-index: 10;
+      opacity: 0;                
+      pointer-events: none;      
+      transform: translateY(30px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .popup.show {
+      opacity: 1;
+      pointer-events: auto;      
+      transform: translateY(0); 
+    }
+    .popup h3 {
+      font-size: 20px;           
+      background: orange;        
+      padding: 5px;
+      margin: -10px -10px 10px -10px; 
+      color: #000;
+    }
+    .popup img { width: 100%; margin-top: 5px; }
+    .close {
+      color: black;
+      cursor: pointer;
+      float: right;
+      font-size: 48px;           
+      font-weight: bold;
+    }
+    .eng {
+      color: blue;
+      font-style: italic;
+      display: block;
+      margin-top: 8px;
+    }
+  </style>
+  <script>
+    function openPopup(id) {
+      document.getElementById(id).classList.add('show');
+    }
+    function closePopup(id) {
+      document.getElementById(id).classList.remove('show');
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <!-- Суурь зураг -->
+    <img src="PLAN.JPG" width="1500">
+
+    <!-- GT Hazard-8 -->
+    <div class="hotspot" style="left:210.09px; top:150.67px;" onclick="openPopup('GT Hazard-8')"></div>
+    <div id="GT Hazard-8" class="popup" style="left:0; top:40px;">
+      <span class="close" onclick="closePopup('GT Hazard-8')">[x]</span>
+      <h3>GT Hazard-8</h3>
+      <p> 
+        Үерийн ус урсаж хаягдлын овоолго доогуур шургаснаар урд ирмэг дагуу давхар цууралт үүссэн. Тус цууралт нь 1610м түвшинд 750м орчим урттай. Ирмэгээс 1-2м зайд хамгаалалтын хөмсөг тавьж тээвэрлэлтийн замаас тусгаарласан. Шинээр ирмэг дагуу хагарал, цууралт үүсэх, гулсалт нуралт ажиглагдах буюу тогтворгүй нөхцөл байдал үүсэх тохиолдолд геотехникийн инженерт яаралтай мэдэгдэж шалгуулах шаардлагатай.
+      </p>
+      <img src="GT Hazard-8.jpg" alt="GT Hazard-8 зураг">
+    </div>
+
+   <!-- GT Hazard-1 -->
+    <div class="hotspot" style="left:1060.6px; top:339.5px;" onclick="openPopup('GT Hazard-1')"></div>
+    <div id="GT Hazard-1" class="popup" style="left:0; top:40px;">
+      <span class="close" onclick="closePopup('GT Hazard-1')">[x]</span>
+      <h3>GT Hazard-1</h3>
+      <p>
+        Стрип 2-3 уурхайн урд өндөр хананы ирмэг дагуу өгөршсөн хөрс чулуулагтай зөөлөн материал дээр ирмэг дагуу цууралтууд үүссэн. Гадарга дээр хэд хэдэн цууралтууд байгаа ба мониторинг хийх зорилгоор кракметр багаж байршуулан хэмжилтийг тогтмол хийж байна. Эрсдэл бүхий талбайн үзлэгийг "TARP"-ын дагуу тогтмол хийх, тухайн эрсдэлтэй бүсэд ойр ажиллах тохиолдолд JHA болон Эрсдэлийн үнэлгээ хийж ажиллана.
+
+      </p>
+      <img src="GT Hazard-1.jpg" alt="GT Hazard-1 зураг">
+    </div>
+
+    <!-- GT Hazard-2 -->
+    <div class="hotspot" style="left:1070px; top:218.03px;" onclick="openPopup('GT Hazard-2')"></div>
+    <div id="GT Hazard-2" class="popup" style="left:0; top:40px;">
+      <span class="close" onclick="closePopup('GT Hazard-2')">[x]</span>
+      <h3>GT Hazard-2</h3>
+      <p>
+      Өгөршсөн хөрс чулуулагтай зөөлөн материал дээр ирмэг дагуу дугуй хэлбэрийн цууралтууд үүссэн. Шинээр ирмэг дагуу хагарал, цууралт үүсэх, гулсалт нуралт ажиглагдах буюу тогтворгүй нөхцөл байдал үүсэх тохиолдолд геотехникийн инженерт яаралтай мэдэгдэж шалгуулах шаардлагатай.
+      </p>
+      <img src="GT Hazard-2.JPG" alt="GT Hazard-2 зураг">
+    </div>
+
+    <!-- GT Hazard-3 -->
+    <div class="hotspot" style="left:930.77px; top:80.06px;" onclick="openPopup('GT Hazard-3')"></div>
+    <div id="GT Hazard-3" class="popup" style="left:0; top:40px;">
+      <span class="close" onclick="closePopup('GT Hazard-3')">[x]</span>
+      <h3>GT Hazard-3</h3>
+      <p>
+         Өгөршсөн хөрс чулуулагтай зөөлөн материал дээр ирмэг дагуу дугуй хэлбэрийн цууралтууд үүссэн. Шинээр ирмэг дагуу хагарал, цууралт үүсэх, гулсалт нуралт ажиглагдах буюу тогтворгүй нөхцөл байдал үүсэх тохиолдолд геотехникийн инженерт яаралтай мэдэгдэж шалгуулах шаардлагатай.
+      </p>
+      <img src="GT Hazard-3.jpg" alt="GT Hazard-3 зураг">
+    </div>
+
+    <!-- GT Hazard-7 -->
+    <div class="hotspot" style="left:1050.27px; top:723.04px;" onclick="openPopup('GT Hazard-7')"></div>
+    <div id="GT Hazard-7" class="popup" style="left:0; top:40px;">
+      <span class="close" onclick="closePopup('GT Hazard-7')">[x]</span>
+      <h3>GT Hazard-7</h3>
+      <p>
+        Үерийн ус урсаж хаягдлын овоолго доогуур шургаснаас үүдэж суулт өгч, давхар цууралт үүссэн. Тус цууралт нь 1570м түвшинд 160м орчим урттай. Ирмэгээс 1-2м зайд хамгаалалтын хөмсөг тавьж тээвэрлэлтийн замаас тусгаарласан. Цууралт үүссэн тухайн эрсдэлтэй бүсийг тээврийн замаас тусгаарлаж тавьсан  хамгаалалтын хөмсгийг гүйцээх. Аюулгүйн зай авч буулгалт хийх. Буулгалт авсан хэсэгт дозероор дүүргэлт хийж аюулыг арилгасны дараа тэлэлтийн ажлыг эхлүүлэх.
+
+      </p>
+      <img src="GT Hazard-7.jpg" alt="GT Hazard-7 зураг">
+    </div>
+    <!-- GT Hazard-11 -->
+    <div class="hotspot" style="left:140.27px; top:740.04px;" onclick="openPopup('GT Hazard-11')"></div>
+    <div id="GT Hazard-11" class="popup" style="left:0; top:40px;">
+      <span class="close" onclick="closePopup('GT Hazard-11')">[x]</span>
+      <h3>GT Hazard-11</h3>
+      <p>
+        Баруун уурхайн налуу зам 4-н хойд хананы 1500-н түвшингийн 10м доголын ирмэг дагуу V500 нүүрсний давхраас дээр давхар цууралтууд үүссэн. Эрсдэл бүхий талбайн үзлэгийг "TARP"-ын дагуу тогтмол хийх, тухайн эрсдэлтэй бүсэд ойр ажиллах тохиолдолд JHA болон Эрсдэлийн үнэлгээ хийж ажиллах. Шинээр ирмэг дагуу хагарал, цууралт үүсэх, гулсалт нуралт ажиглагдах буюу тогтворгүй нөхцөл байдал үүсэх тохиолдолд геотехникийн инженерт яаралтай мэдэгдэж шалгуулах шаардлагатай.
+      </p>
+      <img src="GT Hazard-11.JPG" alt="GT Hazard-11 зураг">
+    </div>
+       <!-- GT Hazard-12 -->
+    <div class="hotspot" style="left:945.27px; top:568.04px;" onclick="openPopup('GT Hazard-12')"></div>
+    <div id="GT Hazard-12" class="popup" style="left:0; top:40px;">
+      <span class="close" onclick="closePopup('GT Hazard-12')">[x]</span>
+      <h3>GT Hazard-12</h3>
+      <p>
+Барууннаран баруун уурхайн урд ахилтын бүс RL-1550 түвшингийн доголын ирмэгээс 9м зайд 50м урттай, RL-1560-н түвшингийн доголын хажуугийн нүүр хэсгийг хамарсан 120м урттай зэрэгцээ цууралтууд үүсч 30-40 см суулт явагдсан. Тухайн эрсдэлтэй хажуу налууд экстенсометр багаж байршуулан хэмжилтийг тогтмол хийж байна. Эрсдэл бүхий талбайн үзлэгийг "TARP"-ын дагуу тогтмол хийх, тухайн эрсдэлтэй бүсэд ойр ажиллах тохиолдолд JHA болон Эрсдэлийн үнэлгээ хийж ажиллах. Шинээр ирмэг дагуу хагарал, цууралт үүсэх, гулсалт нуралт ажиглагдах буюу тогтворгүй нөхцөл байдал үүсэх тохиолдолд геотехникийн инженерт яаралтай мэдэгдэж шалгуулах шаардлагатай.  Цууралттай хажуу налуугийн ойр хийгдэх тэсэлгээний нэг агшинд зарцуулах тэслэх бодисын хэмжээг боломжит хамгийн бага түвшинд байлгах, тэсэлгээний дараа тухайн хэсгийн ирмэг дагуух үзлэгийг тогтмол хийж, өөрчлөлтийг мэдээллэх   
+      </p>
+      <img src="GT Hazard-12.JPG" alt="GT Hazard-12 зураг">
+    </div>
+       <!-- GT Hazard-13-->
+    <div class="hotspot" style="left:463.27px; top:986.04px;" onclick="openPopup('GT Hazard-13')"></div>
+    <div id="GT Hazard-13" class="popup" style="left:0; top:40px;">
+      <span class="close" onclick="closePopup('GT Hazard-13')">[x]</span>
+      <h3>GT Hazard-13</h3>
+      <p>
+        Баруун уурхайн урд хаягдлын овоолгийн 1570-н түвшинд борооны улмаас хуучин цууралттай хэсэгт 20-30 см орчим урттай суулт үүссэн. Ирмэгээс 1-2м зайд хамгаалалтын хөмсөг тавьж тээвэрлэлтийн замаас тусгаарлах. Цууралт үүссэн тухайн эрсдэлтэй бүсийг тээврийн замаас тусгаарлаж  хамгаалалтын хөмсгийг гүйцээх. Аюулгүйн зай авч буулгалт хийх. Буулгалт авсан хэсэгт дозероор дүүргэлт хийж аюулыг арилгасны дараа тэлэлтийн ажлыг эхлүүлэх.
+
+      </p>
+      <img src="GT Hazard-13.JPG" alt="GT Hazard-13 зураг">
+
+
+  </div>
+</body>
+</html>
